@@ -1,0 +1,261 @@
+.footer {
+	background: $Color2;
+	&__body {
+		padding:71px 15px 56px;
+		margin: 0 auto;
+		max-width: 1275px;
+		width: 100%;
+		color: $Color1;
+
+		@media (max-width: 1060px ) {
+			padding:50px 15px 56px;
+		}
+
+		@media (max-width: 575px ) {
+			padding:50px 15px 20px;
+		}
+	}
+	&__top {
+		display: flex;
+
+		@media (max-width: 1060px ) {
+			flex-wrap: wrap;
+		}
+	}
+	&__clumn {}
+	&__column {
+		&:not(:first-child) {
+			padding-right: 15px;
+			padding-left: 3px;
+		}
+		&_1 {
+			flex: 0 1 368 / 1245 * 100%;
+			display: flex;
+			justify-content: flex-end;
+
+			@media (max-width: 1060px ) {
+				flex: 0 1 100%;
+				justify-content: center;
+				margin-bottom: 30px;
+			}
+
+			@media (max-width: $md3+px ) {
+				order: -1;
+			}
+		}
+		&_2 {
+			flex: 0 1 213 / 1245 * 100%;
+
+			@media (max-width: 1060px ) {
+				flex: 0 1 26%;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 33.3333%;
+			}
+
+			@media (max-width: 575px ) {
+				flex: 0 1 100%;
+				margin-bottom: 35px;
+				text-align: center;
+			}
+		}
+		&_3 {
+			flex: 0 1 248 / 1245 * 100%;
+
+			@media (max-width: 1060px ) {
+				flex: 0 1 26%;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 33.3333%;
+			}
+
+			@media (max-width: 575px ) {
+				flex: 0 1 100%;
+				margin-bottom: 35px;
+				text-align: center;
+			}
+		}
+		&_4 {
+			flex: 0 1 240 / 1245 * 100%;
+
+			@media (max-width: 1060px ) {
+				flex: 0 1 26%;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 33.3333%;
+			}
+
+			@media (max-width: 575px ) {
+				flex: 0 1 100%;
+				text-align: center;
+			}
+		}
+		&_5 {
+			flex: 0 1 172 / 1245 * 100%;
+
+			@media (max-width: 1060px ) {
+				flex: 0 1 22%;
+			}
+
+			@media (max-width: $md3+px ) {
+				order: -1;
+				flex: 0 1 100%;
+				padding: 0;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		}
+	}
+	&__logo {
+		margin-right: 19%;
+
+		@media (max-width: 1060px ) {
+			margin-right: 0;
+		}
+		&.logo {
+			max-width: 209px;
+		}
+	}
+	&__title {
+		@include bigText(20,20);
+		margin-bottom: 5px;
+		&_big {
+			@include bigText(25,25);
+		}
+	}
+	&__list {
+		& > li {
+			& > a {
+				@include text(16,400,26);
+				color: $Color1;
+
+				@media (min-width: 992px ) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	&__bottom {}
+}
+
+.bottom-footer {
+	border-top: 1px solid #585858;
+	padding-top: 20px;
+	margin-top: 80px;
+	&__row {
+		&_1 {
+			display: flex;
+			justify-content: space-between;
+
+			@media (max-width: $md2+px ) {
+				justify-content: center;
+			}
+		}
+		&_2 {
+			display: flex;
+			justify-content: flex-end;
+
+			@media (max-width: $md2+px ) {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+	&__nav {
+		flex: 0 0 376px;
+		margin-right: 20px;
+		margin-bottom: 25px;
+		margin-left: 2px;
+
+		@media (max-width: $md2+px ) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		@media (max-width: $md4+px ) {
+			flex: 0 1 auto;
+		}
+	}
+	&__menu-list {
+		display: flex;
+		width: 100%;
+
+		@media (max-width: $md4+px ) {
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+		}
+
+		& > li {
+			&:not(:last-child) {
+				margin-right: 5px;
+
+				@media (max-width: $md4+px ) {
+					margin: 0 5px 10px;
+
+				}
+				& > a {
+					padding-right: 10px;
+
+					@media (max-width: $md4+px ) {
+						padding-right: 0;
+					}
+
+					&:before {
+						position: absolute;
+						content: '';
+						right: 0;
+						top: 6px;
+						height: 4px;
+						width: 4px;
+						background: $Color1;
+						border-radius: 50%;
+
+						@media (max-width: $md4+px ) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			& > a {
+				@include bigText(16,16);
+				font-weight: 300;
+				text-transform: none;
+				color: $Color1;
+				position: relative;
+			}
+		}
+	}
+	&__copy {
+		flex: 0 1 auto;
+		padding-right: 65px;
+		@include bigText(16,16);
+		font-weight: 300;
+		text-transform: none;
+		margin-bottom: 25px;
+		letter-spacing: .2px;
+
+		@media (max-width: $md2+px ) {
+			padding-right: 0;
+			text-align: center;
+		}
+	}
+	&__social {
+		display: flex;
+
+		@media (max-width: $md2+px ) {
+			margin-bottom: 30px;
+		}
+
+		& > li {
+			&:not(:last-child) {
+				margin-right: 7px;
+			}
+		}
+	}
+}

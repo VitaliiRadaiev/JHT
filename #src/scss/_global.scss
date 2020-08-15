@@ -1,0 +1,412 @@
+//@import "../icomoon/style";
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #000;
+	font-size: 14px;
+	font-family: $textFontFamily;
+	&.lock {
+		overflow: hidden;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $textFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	@media (max-width: $md2+px ) {
+		padding-top: 82px;
+	}
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+.page {
+	height: 100%;
+	padding-left: 82px;
+
+	@media (max-width: $md2+px ) {
+		padding-left: 0;
+	}
+}
+//<MIXINS>===========================================================================================================
+	@mixin bigText($fz,$lh) {
+		font-family: $titleFontFamily;
+		font-size: $fz+px;
+		font-weight: 700;
+		line-height: $lh+px;
+		text-transform: uppercase;
+	}
+
+	@mixin text($fz,$fw,$lh) {
+		font-family: $textFontFamily;
+		font-size: $fz+px;
+		font-weight: $fw;
+		line-height: $lh+px;
+	}
+//</MIXINS>===========================================================================================================
+
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+// .container {
+// 	max-width: $mw + px;
+// 	margin: 0 auto;
+// 	width: 100%;
+// 	@media (max-width: $md1+px) {
+// 		max-width: 970px;
+// 	}
+// 	@media (max-width: $md2+px) {
+// 		max-width: 750px;
+// 	}
+// 	@media (max-width: $md3+px) {
+// 		max-width: none;
+// 		padding: 0 10px;
+// 	}
+// }
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: 1135px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	width: 100%;
+	max-width: 302px;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+// ====== video =====================
+.bg-video {
+	position: relative;
+	&__video {
+		width: 100%;
+		object-fit: cover;
+		display: block;
+	}
+	&__controls {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&__play-pause {
+		width: 87px;
+		height: 87px;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 8px solid rgba(255, 255, 255, 0.4);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 40px;
+		transition: all .3s ease;
+
+		@media (min-width: 992px ) {
+			&:hover {
+				border: 8px solid rgba(255, 255, 255, 0.8);
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+
+		& span {
+			margin-left: 8px;
+		}
+	}
+}
+// ====== and video =====================
+
+
+.plus {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	display: inline-block;
+
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		background: $Color1;
+	}
+
+	&:before {
+		width: 100%;
+		height: 1px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+	&:after {
+		width: 1px;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.btn-submit {
+	background: $Color4;
+	min-width: 172px;
+	min-height: 57px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-family: "BentonSans";
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	& span:last-child {
+		margin-left: 23px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.testimonial {
+	max-width: 509px;
+	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1); 
+	background-color: rgba(#fff, 0.95);
+	padding: 43px 63px 37px 62px;
+
+	@media (max-width: 520px ) {
+		padding: 25px 15px 25px 15px;
+	}
+
+	&__row {
+		&_1 {
+			margin-bottom: 29px;
+		}
+		&_2 {
+		}
+	}
+	&__text {
+		color: #37383a;
+	    @include text(14,400,24);
+	}
+	&__author {
+		color: #37383a;
+		@include bigText(20,20);
+		font-weight: 500;
+		text-transform: none;
+
+
+	}
+	&__position {
+		color: #37383a;
+		@include bigText(14,20);
+		font-weight: 400;
+		text-transform: none;
+	}
+}
+
+
+
+.title-link-top {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto 16px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media (max-width: $md4+px ) {
+		justify-content: center;
+	}
+
+	&__title {
+		@include bigText(40,50);
+		margin-right: 30px;
+		color: $Color1;
+
+		@media (max-width: $md4+px ) {
+			font-size: 34px;
+			line-height: 45px;
+			margin-right: 0;
+		}
+	}
+	&__link-viewAll {
+		padding-top: 11px;
+		padding-right: 4px;
+		& > a {
+			color: $Color1;
+			@include bigText(20,20);
+			font-weight: 400;
+			text-transform: none;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.sup-footer {
+	background: $Color4;
+	&__body {
+		min-height: 274px;
+		padding: 30px 15px;
+		margin: 0 auto;
+		max-width: 1230px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: $Color1;
+		flex-wrap: wrap;
+	}
+	&__title {
+		@include bigText(40,40);
+		margin-right: 20px;
+
+		@media (max-width: $md2+px ) {
+			width: 100%;
+			margin-right: 0;
+			text-align: center;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 30px;
+		}
+		
+	}
+	&__link {
+		margin-right: 23px;
+
+		@media (max-width: $md2+px ) {
+			width: 100%;
+			margin-right: 0;
+			max-width: none;
+			text-align: center;
+		}
+
+		& > a {
+			display: inline-flex;
+			align-items: center;
+			color: $Color1;
+			@include bigText(26,26);
+			text-align: right;
+			max-width: 312px;
+
+			@media (max-width: $md2+px ) {
+				text-align: center;
+				justify-content: center;
+			}
+
+			& .triangle {
+				margin-left: 35px;
+			}
+		}
+	}
+}

@@ -1,0 +1,430 @@
+ .navigation {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	height: 100%;
+ 	width: 82px;
+ 	max-width: 1025px;
+ 	background-color: #324c95;
+ 	display: flex;
+ 	z-index: 50;
+ 	overflow: hidden;
+ 	transition: all .4s linear;
+
+ 	@media (max-width: $md2+px ) {
+ 		width: 100% !important;
+ 		height: 82px;
+ 		overflow: visible;
+ 	}
+
+ 	&.open {
+ 		& .navigation__content {
+			padding:0 15px;
+ 		}
+ 	}
+
+
+ 	&__content {
+ 		flex: 1 1 auto;
+ 		overflow: hidden;
+ 		position: relative;
+
+ 		@media (max-width: $md2+px ) {
+ 			display: none;
+ 		}
+ 
+ 	}
+ 	&__btn-box {
+ 		flex: 0 0 82px;
+ 		background-color: $Color4;
+ 		width: 82px;
+
+ 		@media (max-width: $md2+px ) {
+ 			display: flex;
+ 			width: 100%;
+ 			flex: 0 1 100%;
+ 		}
+
+ 	}
+
+ 	&__burger {
+ 		height: 568px;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+ 		border-bottom: 1px solid #5c78c4;
+
+ 		@media (max-width: $md2+px ) {
+			height: 100%;
+			width: 65%;
+			border-bottom: none;
+			border-right: 1px solid #5c78c4;
+ 		}
+ 	}
+ 	&__enquire-now {
+		height: 216px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: all .2s ease;
+
+		@media (min-width: 992px ) {
+			&:hover {
+				background: $Color1;
+			
+				& span {
+					color: #324c95;
+				}
+			}
+		}
+
+ 		@media (max-width: $md2+px ) {
+			height: 100%;
+			width: 35%;
+ 		}
+
+ 		& span {
+ 			display: inline-block;
+ 			transform: rotate(-90deg);
+ 			white-space: nowrap;
+ 			@include bigText(14,14);
+ 			color: #fff;
+ 			margin-bottom: 18px;
+
+ 			 		@media (max-width: $md2+px ) {
+ 						transform: rotate(0deg);
+ 						margin-bottom: 0;
+ 			 		}
+ 		}
+
+ 		&.active {
+ 			background: $Color1;
+ 			
+ 			& span {
+ 				color: #324c95;
+ 			}
+ 		}
+ 	}
+
+ 	&__form-wrap {
+ 		position: absolute;
+ 		left: -100%;
+ 		top: 243px;
+ 		background: $Color1;
+ 		width: 100%;
+ 		height: 541px;
+ 		transition: all .4s ease;
+		overflow: hidden;
+
+
+ 		@media (max-width: $md2+px ) {
+			box-shadow: 0 10px 8px #1a1a1ae0;
+			left: 0;
+			top: 82px;
+			width: 100%;
+			z-index: 11;
+			padding: 0 15px;
+			height: auto;
+			overflow: visible;
+			display: none;
+			transition: none;
+ 		}
+
+ 		@media (min-width: 992px ) {
+ 			display: block !important;
+ 		}
+
+
+ 		&.open {
+ 			left: 0;
+ 		}
+ 	}
+ 	&__form {
+ 		width: 593px;
+ 		margin: 0 auto;
+
+ 		@media (max-width: $md3+px ) {
+			width: 100%;
+ 		}
+ 	}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .content-navigation {
+ 	&__inner {
+ 		width: 593px;
+ 		margin: 0 auto;
+
+ 		@media (max-width: $md2+px ) {
+			position: absolute;
+			left: 0;
+			top: 82px;
+			width: 100%;
+			z-index: 10;
+			background-color: #324c95;
+			padding: 0 15px;
+			display: none;
+ 		}
+
+ 		@media (min-width: 992px ) {
+ 			display: block !important;
+ 		}
+ 	}
+ 	&__logo {
+	 	margin-top: 111px;
+	 	margin-bottom: 29px;
+	 	margin-left: 9px;
+
+	 	@media (max-width: $md2+px ) {
+			margin: 40px auto 29px;
+			width: 100%;
+			text-align: center;
+	 	}
+ 	}
+ 	&__menu {
+
+ 	}
+ 	&__copy {
+ 		color: #fff;
+ 		font-size: 16px;
+ 		font-weight: 300;
+ 		font-family: $titleFontFamily;
+ 		margin-left: -15px;
+
+		@media (max-width: $md2+px ) {
+			margin-left: 0px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+ 	}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .main-menu {
+ 	margin-bottom: 54px;
+ 	&__list {
+ 		position: relative;
+ 		max-width: 415px;
+
+		@media (max-width: $md2+px ) {
+			max-width: none;
+		}
+
+ 		& > li {
+
+ 			&:not(:last-child) {
+ 				margin-bottom: -4px;
+ 			}
+
+ 			&:first-child .main-menu__sublist {
+ 				top: 0;
+ 			}
+
+ 			&:not(:first-child):not(:last-child) .main-menu__sublist { 
+				top: 50%;
+				transform: translate(100%, -44%);
+ 				
+ 			}
+
+ 			&:last-child .main-menu__sublist {
+ 				bottom: 0;
+ 			}
+
+ 			@media (min-width: 992px ) {
+ 				&:hover {
+ 					& .main-menu__sublist {
+ 						display: inline-block;
+ 					}
+
+ 					& > a {
+ 						color: #1b3271;
+ 					}
+
+ 					& .hover-hr {
+ 						background: #1b3271;
+ 					}
+ 				}
+ 			}
+ 		}
+
+ 		& a {
+ 			@include bigText(30,93);
+ 			color: $Color1;
+ 			display: inline-block;
+ 			display: flex;
+ 			align-items: center;
+			transition: all .2s ease;
+
+
+
+ 			& .hover-hr {
+ 				flex: 1 1 auto;
+ 				height: 1px;
+ 				background: transparent;
+ 				margin: 0 15px;
+ 				transition: all .2s ease;
+
+	 			@media (max-width: $md2+px ) {
+					display: none;
+	 			}
+ 			}
+
+ 			@media (max-width: $md2+px ) {
+				justify-content: center;
+				line-height: 70px;
+ 			}
+ 		}
+
+ 		& .hr {
+ 			width: 28px;
+ 			height: 6px;
+ 			background: $Color1;
+
+ 			@media (max-width: $md2+px ) {
+				display: none;
+ 			}
+ 		}
+
+ 	}
+
+ 	&__sublist {
+		display: none;
+		position: absolute;
+		right: 0;
+		transform: translateX(100%);
+		color: $Color1;
+		@include text(16,400,30);
+ 	}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .from-navigation {
+ 	padding:63px 0 70px;
+
+ 	&__title {
+ 		color: #000001;
+ 		font-family: "BentonSans";
+ 		font-size: 30px;
+ 		font-weight: 700;
+ 		line-height: 46px;
+ 		text-transform: uppercase;
+ 		margin-bottom: 20px;
+ 		letter-spacing: 0.2px;
+
+ 		@media (max-width: $md3+px ) {
+ 			text-align: center;
+ 			
+ 		}
+
+ 		@media (max-width: $md4+px ) {
+			font-size: 23px;
+ 		}
+ 	}
+ 	&__inputs-wrap {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		margin: 0 -2px 6px;
+
+ 		@media (max-width: $md3+px ) {
+ 			display: block;
+ 		}
+
+ 	}
+ 	&__item {
+ 		width: 50%;
+ 		padding: 0 2px;
+ 		margin-bottom: 3px;
+
+ 		@media (max-width: $md3+px ) {
+ 			width: 100%;
+ 			margin-bottom: 8px;
+ 		}
+ 	}
+ 	&__item-wrap {
+ 		border: 1px solid #eaeaea;
+ 		height: 57px;
+
+ 		&.err {
+ 			border: 1px solid red;
+ 		}
+
+ 		& label {
+ 			color: #b9b8b9;
+ 			font-family: "BentonSans";
+ 			font-size: 13px;
+ 			font-weight: 400;
+ 			line-height: 20px;
+ 			padding-left: 24px;
+ 			margin-top: 8px;
+ 			display: block;
+ 			margin-bottom: -1px;
+ 		}
+ 	}
+ 	&__input {
+ 		padding: 0 23px;
+ 		color: #000001;
+ 		font-family: "BentonSans";
+ 		font-size: 16px;
+ 		font-weight: 400;
+ 	}
+ 	&__submit-wrap {
+ 		margin-bottom: 44px;
+ 	}
+ 	&__agree {
+ 		@include text(12,300,15);
+ 		color: #3f3f3f;
+
+ 		& > a {
+ 			text-decoration: underline;
+ 			color: $Color4;
+ 		}
+ 	}
+ }
+
+
