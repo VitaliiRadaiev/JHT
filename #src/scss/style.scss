@@ -1,6 +1,6 @@
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
-		font-family: $font_name;
+		font-family: $font_name; 
 		font-display: swap;
 		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
 		font-weight: #{$weight};
@@ -64,6 +64,37 @@
 @import "index";
 // ==== AND HOME PAGE =====================================================
 
+// ==== AER PAGE =====================================================
+@import "aer";
+// ==== AND AER PAGE =====================================================
+
+
+// ==== ABOUT PAGE =====================================================
+@import "about";
+// ==== AND ABOUT PAGE =====================================================
+
+
+// ==== INDUSTRY PAGE =====================================================
+@import "industry";
+// ==== AND INDUSTRY PAGE =====================================================
+
+
+// ==== SERVICE PAGE =====================================================
+@import "service";
+// ==== AND SERVICE PAGE =====================================================
+
+
+// ==== CASE STUDY LISTS PAGE =====================================================
+@import "caseStudyLists";
+// ==== AND CASE STUDY LISTS PAGE =====================================================
+
+// ==== BLOG PAGE =====================================================
+@import "blog";
+// ==== AND BLOG PAGE =====================================================
+
+// ==== CASE STUDY DETAIL PAGE =====================================================
+@import "caseStudyDetail";
+// ==== AND CASE STUDY DETAIL PAGE =====================================================
 
 
 // ==== FOOTER =====================================================

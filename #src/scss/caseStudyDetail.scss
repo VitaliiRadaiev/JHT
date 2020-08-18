@@ -1,0 +1,530 @@
+.case-study-width {
+	margin: 0 auto;
+	max-width: 1185px;
+	padding: 0 15px;
+}
+// ==== CONTENT HEADER =====================================================
+.case-study-detail {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 78%;
+		background-color: #f7f7f7;
+		z-index: -1;
+	}
+
+	@media (max-width: $md2+px ) {
+		& .testimonial {
+			margin: 0 auto;
+		}
+	}
+
+	& .content-header__body {
+		min-height: 821px;
+	}
+
+	& .content-header__column_1 {
+		flex: 0 1 45%;
+	}
+	& .content-header__column_2 {
+		flex: 0 1 55%;
+	}
+
+	& .content-header__text-block {
+
+		@media (min-width: 992px ) {
+			max-width: 517px;
+		}
+	}
+
+	& .content-header__logo {
+		margin-bottom: 70px;
+	}
+
+	& .content-header__suptitle {
+		margin-bottom: 15px;
+	}
+
+	& .content-header__title-wrap {
+		margin-bottom: 34px;
+	}
+
+	& .content-header__title {
+		position: static;
+		color: $Color2;
+		@include bigText(50,50);
+
+		@media (max-width: $md2+px ) {
+			text-align: center;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 36px;
+			line-height: 40px;
+		}
+	}
+
+	& .content-header__testimonial {
+		transform: translateX(48%);
+		position: relative;
+		z-index: 4;
+		margin-bottom: 30px;
+
+		@media (max-width: $md2+px ) {
+			transform: translateX(0%);
+		}
+	}
+}
+// ==== AND CONTENT HEADER =====================================================
+
+
+
+// ==== EUROFINS =====================================================
+.eurofins {
+	margin-top: -8px;
+	padding-bottom: 60px;
+
+	@media (max-width: $md2+px ) {
+		margin-top: 0;
+		padding-top: 50px;
+	}
+
+	@media (max-width: $md3+px ) {
+		padding-bottom: 30px;
+	}
+
+	&__body {
+
+	}
+	&__logo {
+		display: inline-block;
+		max-width: 387px;
+		margin-bottom: 48px;
+
+		@media (max-width: $md2+px ) {
+			margin-bottom: 28px;
+		}
+
+		& > img {
+			width: 100%;
+		}
+	}
+	&__text-wrap {
+		display: flex;
+
+		@media (max-width: $md3+px ) {
+			flex-wrap: wrap;
+		}
+
+		& p {
+			@include text(16,400,26);
+			color: $Color2;
+			margin-bottom: 20px;
+		}
+	}
+	&__column {
+		&_1 {
+			padding-right: 41px;
+			width: 50%;
+
+			@media (max-width: $md2+px ) {
+				padding-right: 15px;
+			}
+
+			@media (max-width: $md3+px ) {
+				width: 100%;
+				padding: 0;
+			}
+		}
+		&_2 {
+			padding-left: 54px;
+			width: 50%;
+
+			@media (max-width: $md2+px ) {
+				padding-left: 15px;
+
+			}
+
+			@media (max-width: $md3+px ) {
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+}
+
+// ==== AND EUROFINS =====================================================
+
+
+// ==== DETAIL =====================================================
+.detail {
+	background-color: #f7f7f7;
+	padding-bottom: 121px;
+
+	@media (max-width: $md2+px ) {
+		padding-bottom: 90px;
+	}
+
+	@media (max-width: $md3+px ) {
+		padding-bottom: 40px;
+	}
+
+	@media (max-width: $md4+px ) {
+		padding-bottom: 0px;
+	}
+	&__body {}
+
+	&__title-wrap {
+		margin-bottom: 71px;
+		text-align: center;
+	}
+
+	&__title {
+		display: inline-block;
+		background: $Color4;
+		color: $Color1;
+		@include bigText(40,40);
+		padding: 22px 100px;
+	}
+
+	&__block-right-text {}
+}
+
+
+
+.right-text-detail {
+	display: flex;
+	padding:61px 0  65px;
+
+	@media (max-width: $md2+px ) {
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: $md3+px ) {
+		padding:38px 0;
+	}
+
+	&__column {
+		&_1 {
+			flex: 0 0 525px;
+			@media (max-width: $md2+px ) {
+				margin: 0 auto;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 auto;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 30px;
+
+			@media (max-width: $md2+px ) {
+				flex: 0 1 100%;
+				order: -1;
+				padding-left: 0;
+			}
+		}
+	}
+	&__img-wrap {
+		width: 525px;
+		height: 329px;
+		background: $Color1;
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		@media (max-width: $md3+px ) {
+			width: auto;
+			max-width: 525px;
+			padding: 0 30px;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 140px;
+			height: 7px;
+			background: $Color4;
+			top: 50%;
+			transform: translate(64%,-50%);
+			right: 0;
+
+			@media (max-width: 1240px ) {
+				display: none;
+			}
+		}
+
+	}
+	&__img {
+		//width: 458px;
+		height: 218px;
+		max-width: 458px;
+
+		& > img {
+			width: 100%;
+		}
+	}
+	&__text-wrap {
+		max-width: 505px;
+
+		@media (max-width: $md2+px ) {
+			max-width: none;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+	}
+	&__second-title {
+		color: $Color2;
+		@include bigText(30,35);
+		margin-bottom: 44px;
+
+		@media (max-width: $md2+px ) {
+			margin-bottom: 20px;
+		}
+
+	}
+	&__text {
+		@include text(16,400,26);
+
+		& p  {
+			margin: 20px 0;
+		}
+	}
+}
+
+
+.left-text-detail {
+	display: flex;
+	padding:61px 0 65px;
+
+	@media (max-width: $md2+px ) {
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: $md3+px ) {
+		padding:38px 0;
+	}
+
+	&__column {
+		&_1 {
+			flex: 1 1 auto;
+			padding-right: 30px;
+			@media (max-width: $md2+px ) {
+				flex: 0 1 100%;
+				order: -1;
+				padding-right: 0;
+			}
+		}
+
+		&_2 {
+
+			flex: 0 0 525px;
+
+			@media (max-width: $md2+px ) {
+				flex: 0 0 100%;
+				display: flex;
+				justify-content: center;
+			}
+
+		}	
+	}
+	&__img-wrap {
+		width: 525px;
+		min-height: 329px;
+		background: $Color1;
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		padding: 15px 0;
+
+		@media (max-width: $md3+px ) {
+			width: auto;
+			max-width: 525px;
+			padding: 0 30px;
+			width: 100%;
+		}
+
+		@media (max-width: $md4+px ) {
+			align-items: flex-end;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 140px;
+			height: 7px;
+			background: $Color4;
+			top: 50%;
+			transform: translate(-71%,-50%);
+			left: 0;
+
+			@media (max-width: 1240px ) {
+				display: none;
+			}
+		}
+
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 41px;
+		width: 297 / 525 * 100%;
+		height: 100%;
+
+		@media (max-width: $md4+px ) {
+			right: 0;
+
+			width: 350 / 525 * 100%;
+		}
+	}
+
+	&__testimonial {
+		min-height: 155px;
+		min-width: 200px;
+		max-width: 267px;
+		background: $Color1;
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+		opacity: 0.95;
+		color: $Color2;
+		@include text(12,400,20);
+		padding: 28px 41px 25px 39px;
+		margin-left: 41px;
+		display: inline-block;
+
+		@media (max-width: $md4+px ) {
+			margin-left: 0;
+		}
+
+	}
+
+	&__text-wrap {
+		max-width: 505px;
+
+		@media (max-width: $md2+px ) {
+			max-width: none;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+	}
+	&__second-title {
+		color: $Color2;
+		@include bigText(30,35);
+		margin-bottom: 44px;
+
+		@media (max-width: $md2+px ) {
+			margin-bottom: 20px;
+		}
+
+	}
+	&__text {
+		@include text(16,400,26);
+
+		& p  {
+			margin: 20px 0;
+		}
+	}
+}
+
+
+// ==== AND DETAIL =====================================================
+
+
+
+
+
+
+
+
+// ==== RELATED CASE =====================================================
+.related-case {
+	padding: 89px 0 51px;
+
+	
+	@media (max-width: $md4+px ) {
+		padding: 50px 0 30px;		
+	}
+
+	&__body {}
+	&__title {
+		@include bigText(40,50);
+		margin-bottom: 59px;
+		color: $Color2;
+
+		@media (max-width: $md2+px ) {
+			text-align: center;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 34px;
+			line-height: 40px;
+			margin-bottom: 30px;		
+		}
+
+	}
+	&__cards {
+
+		& .case-study-card__inner {
+			@media (min-width: 1650px ) {
+				min-height: 452px;
+			}
+		}
+
+		& .case-study-cards-list {
+			justify-content: flex-start;
+
+			@media (max-width: $md2+px ) {
+				justify-content: center;
+			}
+
+			& > li {
+				width: 38.5%;
+
+/*				@media (min-width: 1650px ) {
+					width: 50%;
+				}*/
+
+				@media (max-width: 1200px ) {
+					width: 50%;
+				}
+
+				@media (max-width: $md2+px ) {
+					width: 70%;
+				}
+
+				@media (max-width: $md3+px ) {
+					width: 90%;
+				}
+
+				@media (max-width: 575px ) { 
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.case-study-width {
+}
+.case-study-cards-list {
+}
+.case-study-card {
+	&__inner {}
+	&__img {}
+	&__hever-box {}
+	&__title {}
+	&__text {}
+}
+.plus {
+}
+
+// ==== AND RELATED CASE =====================================================

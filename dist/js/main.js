@@ -22,8 +22,8 @@ function forms(){
 				mss=1;
 			}
 			var opt={
-				cursorcolor:"#9B4E7C",
-				cursorwidth: "12px",
+				cursorcolor:"#3a559f",
+				cursorwidth: "6px",
 				background: "",
 				autohidemode:false,
 				bouncescroll:false,
@@ -854,6 +854,180 @@ if($('.slider-insights').length>0) {
 }
 // === // slider-insights ==================================================================
 
+
+// === content-header__title correct height ==================================================================
+{
+	let titleBox = document.querySelectorAll('.content-header__title-wrap');
+
+	if(titleBox.length > 0) {
+		let observer = new MutationObserver(mutationRecords => {
+			for(let item of titleBox) {
+				let height = item.firstElementChild.clientHeight;
+				item.style.minHeight = height + 'px';			
+			}
+		})
+		
+		for(let item of titleBox) {
+			let height = item.firstElementChild.clientHeight;
+			item.style.minHeight = height + 'px';
+
+
+			observer.observe(item, {
+			  childList: true, 
+			  subtree: true,
+			  characterDataOldValue: true,
+			});
+			
+		}
+	}
+}
+// === // content-header__title correct height ==================================================================
+
+// ==== case-study-card hover =======================================================
+async function correctHeightMobile() {
+	let cardsAdvantages = document.querySelectorAll('.case-study-card');
+	let title = document.querySelectorAll('.case-study-card__title');
+	
+	const getheightTitle = () => {
+		let arr = [];
+		for(let i of title) {
+			arr.push(i.offsetHeight);
+		}
+
+		return Math.max(...arr);
+	}
+
+	let heightTitle = await getheightTitle();
+	
+	for(let i of title) {
+		i.style.minHeight = heightTitle + 'px';
+	}
+
+	if(cardsAdvantages) {
+		for(let card of cardsAdvantages) {
+			let hoverBox = card.querySelector('.case-study-card__hever-box');
+			let img = card.querySelector('.case-study-card__img');
+			let height = hoverBox.offsetHeight
+			hoverBox.style.transform = 'translateY(' + (height - heightTitle) + 'px)';
+			hoverBox.setAttribute('data-position', 'down');
+			img.style.height = (card.offsetHeight - heightTitle) + 'px';
+		}
+		
+		$('.case-study-card').click(function(e) {
+			let hoverBox = this.querySelector('.case-study-card__hever-box');
+			let height = hoverBox.offsetHeight;
+
+			if(hoverBox.dataset.position == 'down') {
+				hoverBox.style.transform = 'translateY(0px)';
+				hoverBox.dataset.position = 'top';
+			} else {
+				hoverBox.style.transform = 'translateY(' + (height - heightTitle) + 'px)';
+				hoverBox.dataset.position = 'down';
+			}
+		});
+	}
+}
+
+async function correctHeight() {
+	let cardsAdvantages = document.querySelectorAll('.case-study-card');
+	let title = document.querySelectorAll('.case-study-card__title')
+	//let images = document.querySelectorAll('.case-study-card__img')
+
+	const getHeightCard = () => {
+		let arr = [];
+		for(let card of cardsAdvantages) {
+			arr.push(card.offsetHeight);
+		}
+		return Math.max(...arr);
+	}
+
+	const getheightTitle = () => {
+		let arr = [];
+		for(let i of title) {
+			arr.push(i.offsetHeight);
+		}
+
+		return Math.max(...arr);
+	}
+
+	let heightTitle = await getheightTitle();
+	// let heightCard = await getHeightCard();
+	// console.log(heightCard) 
+
+	for(let i of title) {
+		i.style.minHeight = heightTitle + 'px';
+	}
+
+	// for(let i of images) {
+	// 	i.style.height = (heightCard - heightTitle) + 'px';
+	// }
+
+	if(cardsAdvantages) {
+		for(let card of cardsAdvantages) {
+			let hoverBox = card.querySelector('.case-study-card__hever-box');
+			let img = card.querySelector('.case-study-card__img');
+			let cardHeight = await card.getBoundingClientRect().height;
+
+			img.style.height = (cardHeight - heightTitle) + 'px';
+			let height = await hoverBox.getBoundingClientRect().height;
+			//console.log(height)
+			hoverBox.style.transform = 'translateY(' + (height - heightTitle) + 'px)';
+		}
+
+		$('.case-study-card').hover(function(e){
+			let hoverBox = this.querySelector('.case-study-card__hever-box');
+			hoverBox.style.transform = 'translateY(0px)';
+			}, function(){
+			let hoverBox = this.querySelector('.case-study-card__hever-box');
+			let height = hoverBox.offsetHeight;
+			hoverBox.style.transform = 'translateY(' + (height - heightTitle) + 'px)';
+		})
+	}
+}
+
+if (isMobile.any()) {
+	let cardsAdvantages = document.querySelectorAll('.case-study-card');
+	if(cardsAdvantages) {
+		correctHeightMobile();
+
+		window.addEventListener('resize', () => {
+			if(document.documentElement.clientWidth >= 1650) {
+				correctHeightMobile();
+			}  else if((document.documentElement.clientWidth < 1650)){
+				correctHeightMobile();
+			}
+		});
+	}
+} else {
+	let cardsAdvantages = document.querySelectorAll('.case-study-card');
+	if(cardsAdvantages) {
+		correctHeight();
+
+		window.addEventListener('resize', () => {
+
+			if((document.documentElement.clientWidth >= 1650)) {
+				correctHeight();
+
+			} else if((document.documentElement.clientWidth < 1650)){
+				correctHeight();
+
+			}
+		});
+	}
+}
+
+
+// ==== // case-study-card hover =======================================================
+
+
+// ====  load-more-btn =======================================================
+let loadMoreBtn = document.querySelector('.load-more-btn');
+if (loadMoreBtn) {
+	loadMoreBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+	})
+}
+// ==== // load-more-btn =======================================================
 
 
 

@@ -11,8 +11,8 @@ function forms(){
 				mss=1;
 			}
 			var opt={
-				cursorcolor:"#9B4E7C",
-				cursorwidth: "12px",
+				cursorcolor:"#3a559f",
+				cursorwidth: "6px",
 				background: "",
 				autohidemode:false,
 				bouncescroll:false,

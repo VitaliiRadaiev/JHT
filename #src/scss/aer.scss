@@ -1,0 +1,276 @@
+// ==== AER INFO =====================================================
+.aer-info {
+	padding: 109px 15px 80px;
+
+	@media (max-width: $md3+px ) {
+		padding: 50px 15px 50px;
+	}
+
+	&__body {
+		display: flex;
+		color: $Color2;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+		}
+	}
+	&__column {
+		&_1 {
+			flex: 0 1 595 / 1313 * 100%;
+			display: flex;
+			justify-content: flex-end;
+		}
+		&_2 {
+			flex: 0 1 718 / 1313 * 100%;
+		}
+	}
+	&__title {
+		max-width: 508px;
+		padding-right: 35px;
+		@include bigText(40,50);
+
+		@media (max-width: $md2+px ) {
+			max-width: none;
+			text-align: center;
+			margin-bottom: 30px;
+			padding-right: 0;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 26px;
+			line-height: 30px;
+		}
+		
+	}
+	&__text {
+		max-width: 642px;
+		@include text(16,400,26);
+		padding: 2px 0 0 9px;
+
+		@media (max-width: $md2+px ) {
+			max-width: none;
+			text-align: center;
+			padding: 0;
+		}
+
+		& > p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+// ==== AND AER INFO  =====================================================
+
+
+
+
+
+
+// ==== OUR VALUES  =====================================================
+.our-values {
+	padding:62px 0 100px;
+
+	@media (max-width: $md4+px ) {
+		padding:50px 0 50px;
+	}
+
+	&__body {
+
+		& .hr {
+			height: 5px;
+			width: 100%;
+			background: $Color4;
+
+			@media (max-width: 1430px ) {
+				display: none;
+			}
+		}
+	}
+	&__title {
+		@include bigText(40,40);
+		color: $Color2;
+		text-align: center;
+		margin-bottom: 33px;
+	}
+	&__row {
+		&_1 {}
+		&_2 {
+
+			@media (max-width: 1430px ) {
+				display: none;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		margin: 0 auto;
+		width: 1300px;
+
+		@media (max-width: 1430px ) {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			width: auto;
+			padding: 0 15px;
+		}
+
+		& > li {
+			flex: 0 0 260px;
+			height: 191px;
+			margin-bottom: 35px;
+
+			@media (max-width: 1430px ) {
+				height: auto;
+
+				margin-bottom: 50px;
+			}
+
+			&:nth-child(1) {
+				& .our-values__icon {
+					margin-top: 9px;
+				}
+			}
+
+			&:nth-child(2) {
+				& .our-values__icon {
+					margin-top: 18px;
+				}
+			}
+
+			&:nth-child(3) {
+				& .our-values__icon {
+					margin-top: 13px;
+				}
+			}
+
+			&:nth-child(4) {
+				& .our-values__icon {
+					margin-top: 3px;
+					margin-bottom: 13px;
+				}
+			}
+
+			&:nth-child(5) {
+				& .our-values__icon {
+					margin-top: 11px;
+				}
+			}
+		}
+	}
+	&__hexagon-wrap {
+		position: relative;
+		width: 227px;
+		height: 191px;
+
+		@media (max-width: 1430px ) {
+			margin-bottom: 50px;
+		}
+	}
+	&__hexagon {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			bottom: 3px;
+			left: 50%;
+			height: 37px;
+			width: 2px;
+			transform: translate(-50%, 100%);
+			background: $Color4;
+		}
+
+		& .hex {
+			stroke: $Color4;
+			stroke-width: 2;
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 13px;
+		left: 0;
+		background: $Color3;
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $Color1;
+		@include bigText(38,38);
+	}
+	&__hexagon-shadow {
+		position: absolute;
+		top: 50%;
+		right: 22px;
+		width: 96px;
+		height: 166px;
+		background: $Color4;
+		transform: translateY(-50%);
+		z-index: -1;
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+
+		&:before {
+			background: $Color4;
+			transform: translateY(-50%) rotate(60deg);
+		}
+
+		&:after {
+			background: $Color4;
+			transform: translateY(-50%) rotate(-60deg);
+		}
+	}
+	&__hexagon-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		padding: 15px 30px;
+	}
+	&__icon {
+		margin-bottom: 20px;
+	}
+	&__text {
+		@include bigText(16,16);
+		font-weight: 500;
+		text-transform: none;
+		color: $Color4;
+	}
+	&__subtext {
+		flex: 0 0 260px;
+		padding: 0 22px;
+		@include text(14,400,24);
+		color: #acacac;
+	}
+
+	&__list-text {
+		display: flex;
+		margin: 0 auto;
+		width: 1300px;
+		margin-top: 42px;
+
+		& > li {
+			flex: 0 0 260px;
+			padding: 0 22px;
+			@include text(14,400,24);
+			color: #acacac;
+		}
+	}
+}
+
+
+// ==== AND OUR VALUES  =====================================================
+
+

@@ -1,0 +1,227 @@
+// ==== CONTENT HEADER =====================================================
+.service {
+	&.content-header {
+		position: relative;
+		z-index: 2;
+	}
+}
+// ==== AND CONTENT HEADER =====================================================
+
+
+
+
+
+// ==== SERVICES =====================================================
+.service {
+	&.services {
+		position: relative;
+		z-index: 1;
+	}
+
+	& .services__body {
+		overflow: visible;
+
+		@media (min-width: 1430px ) {
+			min-height: 686px;
+		}
+	}
+
+	& .services__list {
+		position: relative;
+		margin-top: 151px;
+		top: 0;
+
+		@media (max-width: 630px ) {
+			margin-top: 30px;
+		}	
+	}
+
+	& .services__bg-top {
+		top: -150px;
+	}
+
+	& .services__bg-bottom {
+		bottom: auto;
+		top: 300px;
+		left: 0;
+		height: 386px;
+		overflow: hidden;
+		padding-top: 151px;
+		width: 120%;
+	}
+
+}
+// ==== AND SERVICES =====================================================
+
+
+// ==== SERVICE CONTENT LEFT TEXT =====================================================
+.service-content-left-text {
+	padding:98px 0 104px 15px;
+	display: flex;
+	justify-content: flex-end;
+	background-color: #344e96;
+	@media (max-width: $md2+px ) {
+		padding:98px 0 0px 0px;
+	}	
+	&__body {
+		max-width: 1255px;
+		width: 100%;
+		position: relative;
+		min-height: 537px;
+		display: flex;
+		align-items: center;
+		padding: 20px 0;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+			padding: 0;
+		}		
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 1025 / 1255 * 100%;
+
+		@media (max-width: $md2+px ) {
+			position: relative;
+			width: 100%;
+			min-height: 537px;
+			height: auto;
+		}
+
+		@media (max-width: $md3+px ) {
+			min-height: 437px;
+		}
+
+		@media (max-width: $md4+px ) {
+			min-height: 337px;
+		}	
+	}
+	&__card-wrap {
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: $md2+px ) {
+			text-align: center;
+			padding: 0 15px;
+			transform: translateY(-118px);
+		}	
+	}
+}
+
+.card-service {
+	max-width: 471px;
+	width: 100%;
+	position: relative;
+	padding: 1px 0;
+	display: inline-block;
+	&__hexagon {
+		width: 261px;
+		height: 227px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+	}
+
+	&__hexagon-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 15px 25px;
+		justify-content: center;
+	}
+	&__icon {
+		margin-bottom: 10px;
+	}
+	&__hexagon-text {
+		@include bigText(22,22);
+		color: $Color1;
+		text-align: center;
+	}
+	&__text {
+		background: rgba(#fff, 0.95);
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+		@include text(14,400,24);
+		padding: 146px 46px 37px 64px;
+		margin-top: 117px;
+
+		@media (max-width: $md4+px ) {
+			padding: 146px 20px 37px 20px;
+		}
+	}
+}
+
+// ==== AND SERVICE CONTENT LEFT TEXT =====================================================
+
+
+// ==== SERVICE CONTENT RIGHT TEXT =====================================================
+.service-content-right-text {
+	padding:98px 15px 104px 0px;
+	display: flex;
+	justify-content: flex-start;
+	background-color: #fff;
+	@media (max-width: $md2+px ) {
+		padding:98px 0 0px 0px;
+	}	
+	&__body {
+		max-width: 1255px;
+		width: 100%;
+		position: relative;
+		min-height: 537px;
+		display: flex;
+		align-items: center;
+		padding: 20px 0;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+			padding: 0;
+		}		
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 1025 / 1255 * 100%;
+
+		@media (max-width: $md2+px ) {
+			position: relative;
+			width: 100%;
+			min-height: 537px;
+			height: auto;
+		}
+
+		@media (max-width: $md3+px ) {
+			min-height: 437px;
+		}
+
+		@media (max-width: $md4+px ) {
+			min-height: 337px;
+		}	
+	}
+	&__card-wrap {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+			text-align: center;
+			padding: 0 15px;
+			transform: translateY(-118px);
+		}	
+	}
+}
+// ==== AND SERVICE CONTENT RIGHT TEXT =====================================================
+

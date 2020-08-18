@@ -1,0 +1,276 @@
+ .case-study {
+ 	&__body {
+ 		display: flex;
+ 		padding: 40px 20px 70px;
+ 		position: relative;
+
+ 		@media (max-width: 1430px ) {
+			padding: 40px 15px 70px;
+ 		}
+
+ 		//1320px
+
+ 		@media (max-width: 1320px ) {
+			display: block;
+ 		}
+
+ 		@media (max-width: $md3+px ) {
+			padding: 40px 15px 40px;
+ 		}
+
+ 		&:before {
+ 			position: absolute;
+ 			content: '';
+ 			top: 0;
+ 			left: 0;
+ 			width: 578 / 1358 * 100%;
+ 			background-color: #f7f7f7;
+ 			z-index: -1;
+ 			height: 100%;
+ 		}
+ 	}
+ 	&__aside {
+ 		//flex: 0 1 auto;
+ 		flex: 0 0 452px;
+ 		display: flex;
+ 		justify-content: flex-end;
+ 		padding-right: 21px;
+
+ 		@media (max-width: 1430px ) {
+			flex: 0 0 376px;
+ 		}
+
+ 		@media (max-width: 1320px ) {
+ 			padding-right: 0px;
+ 		}
+ 	}
+
+ 	&__cards {
+ 		//flex: 0 1 864 / 1358 * 100%;
+ 		flex: 1 1 auto;
+ 		padding-top: 89px;
+ 	}
+ 	&__load-more-btn {
+ 		text-align: center;
+ 		margin-top: 68px;
+ 	}
+ }
+
+ .aside-case-study {
+ 	width: 348px;
+
+	@media (max-width: 1320px ) {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@media (max-width: $md3+px ) {
+		display: block;
+	}	
+
+ 	&__logo {
+ 		margin-bottom: 124px;
+
+ 		@media (max-width: 1320px ) {
+ 			flex: 0 1 50%;
+ 			margin-bottom: 70px;
+ 		}
+
+ 		@media (max-width: $md3+px ) {
+ 			margin: 0 auto 50px;
+ 		}	
+ 	}
+
+ 	&__title-wrap {
+		@media (max-width: 1320px ) {
+			flex: 0 1 50%;
+			text-align: right;
+		}
+
+		@media (max-width: $md3+px ) {
+			text-align: center;
+		}	
+ 	}
+
+ 	&__title {
+ 		color: $Color1;
+ 		@include bigText(50,50);
+ 		background: $Color4;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+ 		display: inline-block;
+ 		padding: 11px 25px 13px 30px;
+ 		margin-bottom: 17px;
+
+ 		@media (max-width: $md4+px ) {
+			font-size: 36px;
+ 		}
+ 	}
+ 	&__form {
+ 		margin-bottom: 17px;
+ 		@media (max-width: 1320px ) {
+ 			flex: 0 1 50%;
+ 		}
+ 	}
+ 	&__wrap {
+ 		max-width: 293px;
+
+ 		@media (max-width: $md3+px ) {
+ 			margin: 0 auto;
+ 		}	
+ 	}
+ 	&__text {
+ 		@include text(16,400,30);
+ 		color: $Color2;
+ 		max-width: 300px;
+ 		@media (max-width: 1320px ) {
+ 			flex: 0 1 50%;
+ 			max-width: 346px
+ 		}
+
+ 		@media (max-width: $md3+px ) {
+ 			max-width: none;
+ 			text-align: center;
+
+ 		}	
+ 	}
+ }
+
+ .aside-case-study-select {
+
+ }
+
+
+ .case-study-cards-list {
+ 	margin: 0 -21.5px;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	justify-content: center;
+
+ 	@media (max-width: 1430px ) {
+		margin: 0 -10px;
+ 	}
+
+ 	& > li {
+ 		padding: 0 21.5px;
+ 		width: 50%;
+ 		margin-bottom: 41px;
+
+	 	@media (max-width: 1430px ) {
+			padding: 0 10px;
+	 	}
+
+ 		@media (max-width: $md2+px ) {
+ 			width: 70%;
+ 		}
+
+ 		@media (max-width: $md3+px ) {
+ 			width: 90%;
+ 		}
+
+ 		@media (max-width: 575px ) { 
+ 			width: 100%;
+ 		}
+
+ 		@media (max-width: $md4+px ) {
+ 			margin-bottom: 50px;
+ 		}
+ 	}
+ }
+
+ .case-study-card {
+ 	position: relative;	
+ 	box-shadow: 0 3px 50px rgba(0, 0, 0, 0.06);
+ 	height: 100%;
+ 	&__inner {
+ 		position: relative;
+ 		padding:95px 20px 0;
+ 		min-height: 452px;
+ 		overflow: hidden;
+ 		height: 100%;
+ 		width: 100%;
+ 		background: $Color1;
+
+ 		@media (max-width: $md4+px ) {
+ 			padding:38px 15px 0;
+ 		}
+
+ 		@media (min-width: 1650px ) {
+ 			min-height: 652px;
+ 		}
+ 	}
+ 	&__img {
+ 		position: absolute;
+ 		top: 0;
+ 		left: 0;
+ 		width: 100%;
+
+ 		& img {
+ 			position: absolute;
+ 			top: 0;
+ 			left: 0;
+ 			height: 100%;
+ 			width: 100%;
+ 			object-fit: cover;
+ 		}
+ 	}
+ 	&__hever-box {
+ 		position: relative;
+ 		z-index: 2;
+ 		background: rgba(#fff, 0.95);
+ 		height: 100%;
+ 		width: 100%;
+ 		max-width: 378px;
+ 		padding: 0px 35px 30px;
+ 		transition: all .4s ease;
+ 		margin: 0 auto;
+ 		color: $Color2;
+ 		display: flex;
+ 		flex-direction: column;
+ 		min-width: 347px;
+ 		//min-height: 377px;
+
+/* 		@media (min-width: 1650px ) {
+ 			min-height: 557px;
+ 		}*/
+
+ 		@media (max-width: $md4+px ) {
+ 			padding: 0px 20px 30px;
+ 			min-width: auto;
+ 		}
+
+ 		& > a {
+ 			display: block;
+ 			text-align: center;
+
+ 			& > span {
+ 				height: 38px;
+ 				width: 38px;
+
+ 				&:before, &:after {
+ 					background-color: #3a559f;
+ 				}
+ 			}
+ 		}
+ 	}
+ 	&__title {
+ 		min-height: 146px;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+		@include bigText(23,27);
+		padding: 15px 0;
+
+ 	}
+ 	&__text {
+ 		@include text(16,400,30);
+		flex: 1 1 auto;
+		margin-bottom: 10px;
+ 	}
+
+ }
+
+

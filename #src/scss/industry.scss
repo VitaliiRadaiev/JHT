@@ -1,0 +1,229 @@
+// ==== CONTENT HEADER =====================================================
+.industry {
+	& .content-header__title {
+		//width: 670px;
+
+		@media (max-width: $md3+px ) {
+			width: 100%;
+		}
+	}
+}
+// ==== AND CONTENT HEADER =====================================================
+
+
+
+// ==== INDUSTRIES =====================================================
+.industry {
+	&.industries {
+		background: $Color4;
+	}
+}
+// ==== AND INDUSTRIES =====================================================
+
+
+
+
+// ==== INDUSTRY CONTENT BLOCK =====================================================
+.industry-content-block {
+	background: #344e96;
+
+	&_1 {
+		
+		& .industry-content-block__body {
+			padding: 205px 0px 53px;
+
+			@media (max-width: $md3+px ) {
+				padding: 75px 0px 53px;
+			}
+		}
+	}
+
+	&_2 {
+		background: $Color1;
+
+		& .industry-content-block__body {
+			@media (max-width: $md4+px ) {
+				padding: 70px 0px 50px;
+			}
+		}
+	}
+
+	&_3 {
+		& .industry-content-block__body {
+			padding: 100px 0px 56px;
+		}
+	}
+
+	&__body {
+		padding: 100px 0px 100px;
+		width: 100%;
+	}
+	&__row {
+		&_1 {
+			position: relative;
+			min-height: 537px;
+			display: flex;
+			padding: 20px 0;
+			align-items: center;
+			max-width: 1155px;
+			margin: 0 auto;
+
+			@media (max-width: $md2+px ) {
+				justify-content: center;
+				align-items: flex-end;
+				margin-bottom: 150px;
+				padding: 20px 15px;
+			}
+
+			@media (max-width: $md3+px ) {
+				min-height: 437px;
+			}
+
+			@media (max-width: $md4+px ) {
+				min-height: 337px;
+			}
+		}
+		&_2 {
+			max-width: 1185px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 953 / 1155 * 100%;
+
+		@media (max-width: $md2+px ) {
+			width: 100%;
+		}
+	}
+	&__testimonial {
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: $md2+px ) {
+				transform: translateY(150px);
+		}
+
+		& .testimonial {
+			padding: 39px 63px 39px 54px;
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+
+			@media (max-width: 520px ) {
+				padding: 25px 15px 25px 15px;
+			}
+		}
+
+		& .testimonial__title {
+			@include bigText(30,40);
+			color: $Color2;
+		}
+	}
+
+	&__bottom {}
+}
+
+.bottom-industry-block-content {
+	color: $Color1;
+	padding: 33px 0 30px;
+	&__title {
+		@include bigText(30,30);
+		margin-bottom: 24px;
+
+		@media (max-width: $md2+px ) {
+			text-align: center;
+		}
+	}
+	&__text-wrap {
+		display: flex;
+
+		@media (max-width: $md2+px ) {
+			flex-wrap: wrap;
+		}
+	}
+	&__column {
+		& > p {
+			@include text(16,400,26);
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			@media (max-width: $md3+px ) {
+				margin-bottom: 20px !important;
+			}
+		}
+
+		&_1 {
+			flex: 0 0 211 / 1155 * 100%;
+			padding-top: 10px;
+			padding-right: 15px;
+
+			@media (max-width: $md2+px ) {
+				flex: 0 1 100%;
+				margin-bottom: 30px;
+				text-align: center;
+				padding-right: 0;
+			}
+		}
+		&_2 {
+			flex: 0 1 472 / 1155 * 100%;
+			padding-right: 31.5px;
+
+			@media (max-width: $md2+px ) {
+				flex: 0 1 50%;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 100%;
+				padding: 0;
+			}
+		}
+		&_3 {
+			flex: 0 1 472 / 1155 * 100%;
+			padding-left: 30.5px;
+
+			@media (max-width: $md2+px ) {
+				flex: 0 1 50%;
+			}
+
+			@media (max-width: $md3+px ) {
+				flex: 0 1 100%;
+				padding: 0;
+			}
+		}
+	}
+	&__link {
+		margin-top: -8px;
+
+		& > a {
+			display: flex;
+			align-items: center;
+			color: #2598e9;
+			@include bigText(20,30);
+			font-weight: 300;
+			text-transform: none;
+
+			& > span {
+				&:before, &:after {
+					background:  #2598e9;
+				}
+			}
+		}
+	}
+}
+.logo-amazon {
+	max-width: 161px;
+	display: inline-block;
+
+	& > img {
+		width: 100%;
+	}
+}
+
+
+// ==== AND INDUSTRY CONTENT BLOCK =====================================================
+

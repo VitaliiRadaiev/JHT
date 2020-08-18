@@ -1,0 +1,268 @@
+// ==== CONTENT HEADER =====================================================
+.about-us {
+	& .content-header__title {
+		//width: 661px;
+
+		@media (max-width: $md3+px ) {
+			width: 100%;
+		}
+
+		& > p {
+			&:nth-child(2) {
+				padding-right: 21px;
+			}
+		}
+	}
+}
+// ==== AND CONTENT HEADER =====================================================
+
+
+
+
+// ==== PRINCIPLES =====================================================
+.principles {
+	&__body {
+		padding:84px 15px 23px;
+		max-width: 1185px;
+		margin: 0 auto;
+
+		@media (max-width: $md4+px ) {
+			padding: 50px 0px 20px;
+		}		
+	}
+	&__title {
+		@include bigText(40,50);
+		color:$Color2;
+		margin-bottom: 85px;
+
+		@media (max-width: $md2+px ) {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 34px;
+			margin-bottom: 30px;
+		}		
+	}
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -12.5px;
+	}
+	&__item {
+		flex: 0 0 393px;
+		padding: 0 12.5px;
+		margin-bottom: 50px;
+
+		@media (max-width: $md4+px ) {
+			flex: 0 1 100%;
+		}	
+	}
+}
+.card-principles {
+	&__inner {
+		position: relative;
+		padding: 1px 39px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: $md4+px ) {
+			padding: 1px 15px;
+		}	
+	}
+	&__img {
+		width: 368px;
+		height: 446px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		@media (max-width: $md4+px ) {
+			width: 100%;
+		}	
+	}
+	&__text-content {
+		margin-top: 227px;
+		background: $Color4;
+		color: $Color1;
+		text-align: center;
+		padding: 50px 35px 45px;
+		flex: 1 1 auto;
+
+		@media (max-width: $md4+px ) {
+			padding: 50px 25px 35px;
+		}
+	}																																																																										
+	&__title {
+		@include bigText(30,35);
+		margin-bottom: 30px;
+	}
+	&__text {
+		@include text(16,400,26);
+	}
+}
+
+// ==== AND PRINCIPLES =====================================================
+
+
+
+// ==== OUR COMPANY =====================================================
+.our-company {
+	&__row {
+		&:first-child {
+			margin-bottom: 53px;
+		}
+	}
+
+	&__text-content {
+		padding:50px 15px 50px;
+		max-width: 1185px;
+		margin: 0 auto;
+
+		@media (max-width: $md4+px ) {
+			padding: 50px 15px 20px;
+		}	
+	}
+	&__title {
+		@extend .principles__title;
+		margin-bottom: 60px;
+	}
+	&__text {
+		display: flex;
+
+		@media (max-width: $md3+px ) {
+			display: block;
+		}
+
+		& > div {
+			width: 50%;
+
+
+
+			&:first-child {
+				padding-right: 27px;
+
+				@media (max-width: $md2+px ) {
+					padding-right: 10px;
+				}
+
+				@media (max-width: $md3+px ) {
+					padding: 0;
+					margin-bottom: 20px;
+				}
+			}
+
+			&:last-child {
+				padding-left: 28px;
+
+				@media (max-width: $md2+px ) {
+					padding-left: 10px;
+				}
+
+				@media (max-width: $md3+px ) {
+					padding: 0;
+				}
+			}
+
+			@media (max-width: $md3+px ) {
+				width: 100%;
+			}
+
+			& > p {
+				@include text(16,400,26);
+
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+.bottom-our-company {
+	position: relative;
+	height: 0;
+	padding-bottom: 52%;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#000, 0.27);
+		z-index: 1;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__text-wrap {
+		position: absolute;
+		z-index: 1;
+		bottom: 15%;
+		left: 7%;
+		color: $Color1;
+	}
+	&__suptitle {
+		@include bigText(60,60);
+		margin-bottom: -1%;
+		font-size: calc(20px + 40 * (100vw / 1440));
+		line-height: calc(20px + 40 * (100vw / 1440));
+		@media (max-width: $md3+px ) {
+			font-size: calc(20px + (40 + 40 * 0.7) * ((100vw - 320px) / 1440));
+			line-height: calc(20px + (40 + 40 * 0.7) * ((100vw - 320px) / 1440));
+		}
+	}
+	&__title {
+		@include bigText(107,107);
+		
+
+		font-size: calc(35px + 72 * (100vw / 1440));
+		line-height: calc(35px + 72 * (100vw / 1440));
+		@media (max-width: $md3+px ) {
+			font-size: calc(35px + (72 + 72 * 0.7) * ((100vw - 320px) / 1440));
+			line-height: calc(35px + (72 + 72 * 0.7) * ((100vw - 320px) / 1440));
+		}
+	}
+}
+.ibg {
+}
+
+// ==== AND OUR COMPANY =====================================================
+
+
+
+// ==== VALUES =====================================================
+.about-us {
+	
+	&.our-values {
+		padding-top: 77px;
+		padding-bottom: 129px;
+
+		@media (max-width: $md4+px ) {
+			padding-top: 60px;
+			padding-bottom: 20px;
+		}	
+	}
+	& .our-values__list {
+		justify-content: space-evenly;
+	}
+
+	& .our-values__list-text {
+		justify-content: space-evenly;
+	}
+
+	& .our-values__label {
+		display: none;
+	}
+}
+// ==== AND VALUES =====================================================
