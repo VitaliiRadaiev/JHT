@@ -4630,6 +4630,252 @@ textarea.input {
 				}*/
 }
 
+.contact {
+  padding: 40px 0px 123px;
+  position: relative;
+}
+
+.contact:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 43%;
+  background-color: #f7f7f7;
+  z-index: -1;
+}
+
+.contact__body {
+  max-width: 1185px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact__logo {
+  margin-bottom: 116px;
+}
+
+.contact__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__column_1 {
+  -webkit-box-flex: 36.36364%;
+      -ms-flex: 36.36364%;
+          flex: 36.36364%;
+}
+
+.contact__column_2 {
+  -webkit-box-flex: 63.63636%;
+      -ms-flex: 63.63636%;
+          flex: 63.63636%;
+}
+
+.contact__form-wrap {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 48px 68px 128px;
+}
+
+.info-contact {
+  padding: 37px 60px 49px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.info-contact__header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.info-contact__title {
+  font-family: "GTWalsheimPro", sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+  margin-bottom: -4px;
+}
+
+.info-contact__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #3f3f3f;
+}
+
+.info-contact__text > p {
+  margin: 20px 0;
+}
+
+.info-contact__company-name {
+  font-family: "GTWalsheimPro", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #3a559f;
+  text-transform: none;
+  margin-bottom: 25px;
+}
+
+.info-contact__list {
+  max-width: 317px;
+}
+
+.list-contact-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #3f3f3f;
+}
+
+.list-contact-data > li {
+  margin-bottom: 10px;
+}
+
+.list-contact-data__address {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.list-contact-data__phone {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 57%;
+          flex: 0 1 57%;
+  padding-right: 15px;
+}
+
+.list-contact-data__fax {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 43%;
+          flex: 0 1 43%;
+}
+
+.list-contact-data__email {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.list-contact-data__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+
+.list-contact-data__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.form-contact__title {
+  color: #000001;
+  font-family: "GTWalsheimPro", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-contact__inputs-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -2px 6px;
+}
+
+.form-contact__item {
+  width: 50%;
+  padding: 0 2px;
+  margin-bottom: 3px;
+}
+
+.form-contact__item_textarea {
+  width: 100%;
+}
+
+.form-contact__item-wrap {
+  border: 1px solid #eaeaea;
+  height: 57px;
+}
+
+.form-contact__item-wrap_textarea {
+  height: 251px;
+}
+
+.form-contact__item-wrap.err {
+  border: 1px solid red;
+}
+
+.form-contact__item-wrap label {
+  color: #b9b8b9;
+  font-family: "BentonSans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-left: 24px;
+  margin-top: 8px;
+  display: block;
+  margin-bottom: -1px;
+}
+
+.form-contact__input {
+  padding: 0 23px;
+  color: #000001;
+  font-family: "BentonSans";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-contact__input_textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 24px 23px;
+}
+
+.form-contact__submit-wrap {
+  margin-bottom: 46px;
+}
+
+.form-contact__agree {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #3f3f3f;
+}
+
+.form-contact__agree > a {
+  text-decoration: underline;
+  color: #3a559f;
+}
+
 .footer {
   background: #3f3f3f;
 }
@@ -5166,6 +5412,10 @@ textarea.input {
 @media (max-width: 1200px) {
   .related-case__cards .case-study-cards-list > li {
     width: 50%;
+  }
+
+  .info-contact {
+    padding: 37px 15px 49px 0;
   }
 }
 
@@ -5755,6 +6005,32 @@ textarea.input {
     width: 70%;
   }
 
+  .contact__inner {
+    display: block;
+  }
+
+  .info-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .info-contact__header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 356px;
+            flex: 0 1 356px;
+  }
+
+  .info-contact__data {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 317px;
+            flex: 0 1 317px;
+  }
+
   .bottom-footer__row_1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -6082,6 +6358,57 @@ textarea.input {
 
   .related-case__cards .case-study-cards-list > li {
     width: 90%;
+  }
+
+  .contact__logo {
+    margin: 0 auto 10px;
+  }
+
+  .info-contact {
+    display: block;
+    padding: 37px 15px 20px 0;
+  }
+
+  .info-contact__header {
+    margin-bottom: 40px;
+  }
+
+  .info-contact__title {
+    text-align: center;
+  }
+
+  .info-contact__text {
+    text-align: center;
+  }
+
+  .info-contact__company-name {
+    text-align: center;
+  }
+
+  .info-contact__list {
+    max-width: none;
+  }
+
+  .list-contact-data {
+    display: block;
+    text-align: center;
+  }
+
+  .list-contact-data__phone {
+    padding-right: 0px;
+  }
+
+  .form-contact__title {
+    text-align: center;
+  }
+
+  .form-contact__inputs-wrap {
+    display: block;
+  }
+
+  .form-contact__item {
+    width: 100%;
+    margin-bottom: 8px;
   }
 
   .footer__column_1 {
@@ -6477,6 +6804,27 @@ textarea.input {
     font-size: 34px;
     line-height: 40px;
     margin-bottom: 30px;
+  }
+
+  .contact {
+    padding: 40px 0px 50px;
+  }
+
+  .contact__form-wrap {
+    padding: 30px 5px 50px;
+  }
+
+  .info-contact__title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .info-contact__company-name {
+    font-size: 28px;
+  }
+
+  .form-contact__title {
+    font-size: 23px;
   }
 
   .bottom-footer__nav {
